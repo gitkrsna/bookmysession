@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation</title>
+    <style>
+        body{
+            background-color: blanchedalmond;
+        }
+        
+        p{
+            text-align: center;
+            color:red;
+            font-size: 20px;
+        }
+
+        .confirmation{
+            font-size: 30px;
+            margin-top: 100px;
+        }
+
+        .thanks{
+            font-size: 25px;
+        }
+
+    </style>
+</head>
+<body >
+    <p class="confirmation">Thank You for form submission. We will contact you Soon</p>
+
+    <p class= "thanks">Your details are:</p>
+    <p>Parent Name : {{data.parent_name}}</p>
+    <p>Email Id : {{data.email_id}}</p>
+    <p>Contact No : {{data.contact_no}}</p>
+    <p>Child's Name : {{data.child_name}}</p>
+    <p>Child's Age : {{data.child_age}}</p>
+    <p>Course : {{course}}</p>
+    <p>Date : {{date}}</p>
+    <p>TIme : {{time}}</p>
+   
+    
+    
+    
+</body>
+</html>

@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Demo</title>
+
+    <link
+      rel="stylesheet"
+      href="{% static '/appointment/base.css' %}"
+      type="text/css"
+    />
+  </head>
+
+  <body class="cover">
+    <div>
+      <form method="POST" action=" ">
+        {%csrf_token%}
+        
+        <div>
+          <input type="text" placeholder="Enter Parent's Name" id="parent_name" name="parent_name" {{parent_name}}" />
+           
+        </div>
+
+        <div>
+          <input type="number" placeholder="Parent's contact no." id="contact_no" name="contact_no" {{contact_no}}" />
+    
+        </div>
+
+        <div>
+          <input type="email" placeholder="Parent's email id" id="email_id" name="email_id"  />
+          
+        </div>
+
+        <div>
+          <input type="text" placeholder="Enter child's name" id="child_name" name="child_name"  />
+          
+        </div>
+
+        <div>
+          <input type="number" placeholder="Enter child's age" id="child_age" name="child_age"  />
+          
+        </div>
+
+        <div>
+          <select class="box" id="course_time_date" name="course_time_date"  >
+            <option>Select course and suitable time</option>
+            {% for c in data %}
+            <option>{{ c }}</option>
+            {% endfor %}
+          </select>
+        </div>
+
+        <button type="submit">Submit</button>
+      
+      </form>
+
+    </div>
+  </body>
+</html>
